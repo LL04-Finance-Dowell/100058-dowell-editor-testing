@@ -95,10 +95,10 @@ const CalendarRightSidebar = (props) => {
         <Form.Label>Select Date Format</Form.Label>
         <select
           onChange={handleDateMethod}
-          className="select border-0 bg-white rounded w-100 h-75 p-2"
+          className="select border-0 bg-white text-secondary rounded w-100 h-75 p-2"
         >
           <option value="select" selected={method == "select"}>
-            Select Format
+            Choose Format
           </option>
           <option value="first" selected={method == "first"}>
             4/19/2023
@@ -143,6 +143,33 @@ const CalendarRightSidebar = (props) => {
         className={`text-center`}
         style={{ marginTop: !rightSideDatemenu && "25px" }}
       >
+
+
+        <div className="pt-3 mb-4">
+          <div className='dropdown'>
+            <h6>Grouped Elements</h6>
+            <select className='shadow bg-white p-3 text-secondary rounded w-100 h-100 border-0 rounded select'>
+              <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+              <option value="Action">Action</option>
+              <option value="Another action">Another action</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="pt-0">
+          <div className='dropdown'>
+            <h6>User Permissions</h6>
+            <select className='shadow bg-white text-secondary p-3 rounded w-100 h-100 border-0 select'>
+              <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+              <option value="Action">Anjanas</option>
+              <option value="Another action">Manish</option>
+              <option value="Something else">Thomas</option>
+            </select>
+          </div>
+        </div>
+
+
         <Button
           variant="primary"
           onClick={removeDate}

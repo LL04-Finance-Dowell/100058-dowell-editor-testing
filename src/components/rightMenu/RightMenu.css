@@ -148,3 +148,8 @@ input:checked + .slider:before {
   margin: 3px;
   border-radius: 5px;
 }
+
+.remove_button {
+  position: relative;
+  margin-top: 80%;
+}

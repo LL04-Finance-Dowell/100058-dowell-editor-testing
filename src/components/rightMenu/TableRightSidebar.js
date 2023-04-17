@@ -8,6 +8,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { useStateContext } from "../../contexts/contextProvider";
 import { table_dropdown_focuseddClassMaintain } from "../../utils/focusClassMaintain/focusClass";
+import { Row } from "react-bootstrap";
 // import { CgMenuCheese } from "react-icons/cg";
 
 const TableRightSidebar = () => {
@@ -366,7 +367,7 @@ const TableRightSidebar = () => {
             for (let i = 0; i < allTableTr.length; i++) {
               focusseddDiv?.firstElementChild?.children[1]
                 .querySelectorAll("tr")
-                [i].childNodes[index].remove();
+              [i].childNodes[index].remove();
             }
             e.stopPropagation();
           };
@@ -821,28 +822,35 @@ const TableRightSidebar = () => {
         />
       </div>
 
-      <div className="d-flex mt-2 justify-content-center pt-5">
-        {/* {!numOfColumn && !numOfRow ? ( */}
+      <hr/>
 
-        <Button
-          variant="secondary"
-          className="px-5 me-3"
-          onClick={makeTable}
-          disabled={isCreateTableBtnDisabled}
-        >
-          Create Table
-        </Button>
-        {/* <Button
-          variant="success"
-          className="px-5"
-          // data-bs-toggle="modal"
-          // data-bs-target="#tableUpdateModal"
-          onClick={updateTable}
-          disabled={isDisableTableRightMenu}
-        >
-          Update Table
-        </Button> */}
-      </div>
+      <Row className="pt-3 mb-4">
+        <div className='dropdown'>
+          <h6>Grouped Elements</h6>
+          <select className='shadow bg-white text-secondary rounded w-100 h-100 border-0 rounded select'>
+            <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+            <option value="Action">Action</option>
+            <option value="Another action">Another action</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+      </Row>
+
+      <br />
+
+      <Row className="pt-0">
+        <div className='dropdown'>
+          <h6>User Permissions</h6>
+          <select className='shadow bg-white text-secondary rounded w-100 h-100 border-0 select'>
+            <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+            <option value="Action">Anjanas</option>
+            <option value="Another action">Manish</option>
+            <option value="Something else">Thomas</option>
+          </select>
+        </div>
+      </Row>
+
+  
 
       {/* <div className='dropdown pt-4'>
         <h6>User permissions</h6>

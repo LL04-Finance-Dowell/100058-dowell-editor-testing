@@ -919,7 +919,7 @@ const MidSection = React.forwardRef((props, ref) => {
           // }
           if (
             decoded.details.action === "document" &&
-            element.data == "Signature here"
+            element.data == "Place your signature here"
           ) {
             // signField.innerHTML = `<img src=${element.data} />`;
             signField.innerHTML = "Signature here";
@@ -1371,6 +1371,7 @@ const MidSection = React.forwardRef((props, ref) => {
           para.innerHTML = " Dropdown Name";
           para.className = "dropdownName";
           para.innerText = element.data1;
+          element.data1= "Enter List Items"
 
           dropdownField.append(para);
           dropdownField.append(selectElement);

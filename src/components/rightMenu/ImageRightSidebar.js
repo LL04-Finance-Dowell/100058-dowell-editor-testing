@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { useStateContext } from "../../contexts/contextProvider";
+import { Col, Row } from "react-bootstrap";
 
 const ImageRightSidebar = () => {
   var { setIsFinializeDisabled, handleClicked, setSidebar } = useStateContext();
@@ -58,17 +59,55 @@ const ImageRightSidebar = () => {
 
   return (
     <>
-      {/* <div className='dropdown pt-4'>
-        <h6>User permissions</h6>
-        <select className='shadow bg-white rounded w-100 h-75'>
-          <option value="Nothing Selected" selected="selected">Nothing Selected</option>
-          <option value="Action">Action</option>
-          <option value="Another action">Another action</option>
-          <option value="Something else">Something else</option>
-        </select>
-      </div> */}
 
-      <div className="mt-5 text-center pt-1">
+      <Row >
+        <Col>
+          <h6>Border</h6>
+        </Col>
+        <Col className="text-end">
+          <label className="switch">
+            <input type="checkbox" />
+            <span className="slider round"></span>
+          </label>
+        </Col>
+      </Row>
+      <Row className="picker-input">
+        <Col>
+          <input type="color" />
+        </Col>
+        <Col>
+          <input type="range" min="1" max="100" value="50" />
+        </Col>
+      </Row>
+      <hr />
+
+      <Row className="pt-0 mb-4">
+        <div className='dropdown'>
+          <h6>Grouped Elements</h6>
+          <select className='shadow bg-white text-secondary rounded w-100 h-100 border-0 select'>
+            <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+            <option value="Action">Action</option>
+            <option value="Another action">Another action</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+      </Row>
+
+      <br />
+
+      <Row className="pt-0">
+        <div className='dropdown'>
+          <h6>User Permissions</h6>
+          <select className='shadow bg-white text-secondary rounded w-100 h-100 border-0 select'>
+            <option value="Nothing Selected" selected="selected">Nothing Selected</option>
+            <option value="Action">Anjanas</option>
+            <option value="Another action">Manish</option>
+            <option value="Something else">Thomas</option>
+          </select>
+        </div>
+      </Row>
+
+      {/* <div className="mt-5 text-center pt-1">
         <Button
           className="w-75"
           variant="secondary"
@@ -76,8 +115,8 @@ const ImageRightSidebar = () => {
         >
           Choose Image
         </Button>
-      </div>
-      <div className="mt-5 text-center pt-1">
+      </div> */}
+      <div className="mt-5 text-center">
         <Button
           className="w-75 remove_button"
           variant="primary"
